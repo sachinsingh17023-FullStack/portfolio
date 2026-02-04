@@ -1,7 +1,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import Tilt from "react-parallax-tilt";
-import ProfilePic from "../../assets/profilepic.png"; // make sure png & case match
+import ProfilePic from "../../assets/profile2.png";
 
 const About = () => {
   return (
@@ -48,7 +48,7 @@ const About = () => {
 
           {/* DOWNLOAD CV */}
           <a
-            href="/Sachin_Singh_Resume.pdf"  // file must be inside public folder
+            href="/sachin-cv.pdf"
             download
             className="inline-block text-white px-8 py-3 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
             style={{
@@ -61,18 +61,24 @@ const About = () => {
           </a>
         </div>
 
-        {/* RIGHT SIDE */}
+        {/* RIGHT SIDE – PROFILE PIC WITH PERFECT TILT */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] border-4 border-purple-700 rounded-full"
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
+            tiltMaxAngleX={25}
+            tiltMaxAngleY={25}
+            perspective={1200}
+            transitionSpeed={800}
+            scale={1.05}
+            gyroscope={true}
+            trackOnWindow={true}
           >
-            <img
-              src={ProfilePic}
-              alt="Sachin Singh"
-              className="w-72 h-72 md:w-96 md:h-96 rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
-            />
+            <div className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full border-4 border-purple-700 flex items-center justify-center overflow-hidden">
+              <img
+                src={ProfilePic}
+                alt="Sachin Singh"
+                className="w-full h-full object-cover rounded-full"
+              />
+            </div>
           </Tilt>
         </div>
 
