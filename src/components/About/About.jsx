@@ -47,8 +47,10 @@ const About = () => {
             solving real-world problems.
           </p>
 
+          {/* ✅ DOWNLOAD CV BUTTON */}
           <a
-            href="#"
+            href="/sachin-cv.pdf"
+            download
             className="inline-block text-white px-8 py-3 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
             style={{
               background: "linear-gradient(90deg, #8245ec, #a855f7)",
