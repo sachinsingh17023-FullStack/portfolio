@@ -1,7 +1,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import Tilt from "react-parallax-tilt";
-import ProfilePic from "../../assets/profile2.jpg";
+import ProfilePic from "../../assets/profilepic.png"; // make sure png & case match
 
 const About = () => {
   return (
@@ -13,7 +13,6 @@ const About = () => {
 
         {/* LEFT SIDE */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
-
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-2">
             Hi, I am
           </h1>
@@ -47,8 +46,10 @@ const About = () => {
             solving real-world problems.
           </p>
 
+          {/* DOWNLOAD CV */}
           <a
-            href="#"
+            href="/Sachin_Singh_Resume.pdf"  // file must be inside public folder
+            download
             className="inline-block text-white px-8 py-3 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
             style={{
               background: "linear-gradient(90deg, #8245ec, #a855f7)",
@@ -62,18 +63,17 @@ const About = () => {
 
         {/* RIGHT SIDE */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
-
-        <Tilt
-        className='w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem ] border-4 border-purple-700 rounded-full'>
-          tiltMaxAngleX={20}
-          tiltMaxAngleY={20}
-         <img
-            src={ProfilePic}
-            alt="Sachin"
-            className="w-72 h-72 md:w-96 md:h-96 rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
-          />
-        </Tilt>
-         
+          <Tilt
+            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] border-4 border-purple-700 rounded-full"
+            tiltMaxAngleX={20}
+            tiltMaxAngleY={20}
+          >
+            <img
+              src={ProfilePic}
+              alt="Sachin Singh"
+              className="w-72 h-72 md:w-96 md:h-96 rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
+            />
+          </Tilt>
         </div>
 
       </div>
@@ -82,4 +82,3 @@ const About = () => {
 };
 
 export default About;
- 
