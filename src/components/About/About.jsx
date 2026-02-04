@@ -1,7 +1,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import Tilt from "react-parallax-tilt";
-import ProfilePic from "../../assets/profile2.png";
+import ProfilePic from "../../assets/Profile2.png";
 
 const About = () => {
   return (
@@ -10,10 +10,9 @@ const About = () => {
       className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
     >
       <div className="flex flex-col-reverse md:flex-row items-center">
-
+        
         {/* LEFT SIDE */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
-
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-2">
             Hi, I am
           </h1>
@@ -41,13 +40,13 @@ const About = () => {
             </span>
           </h3>
 
-          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8">
+          <p className="text-base sm:text-lg text-gray-400 mb-10 mt-8">
             I build modern, responsive web applications with clean UI and
             scalable code. Passionate about learning new technologies and
             solving real-world problems.
           </p>
 
-          {/* ✅ DOWNLOAD CV BUTTON */}
+          {/* DOWNLOAD CV */}
           <a
             href="/sachin-cv.pdf"
             download
@@ -75,8 +74,8 @@ const About = () => {
           >
             <img
               src={ProfilePic}
-              alt="Sachin"
-              className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
+              alt="Sachin Singh"
+              className="w-full h-full rounded-full object-cover"
             />
           </Tilt>
         </div>
